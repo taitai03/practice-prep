@@ -11,7 +11,7 @@ export const FREE_SHIPPING_THRESHOLD = 5000;
  * @returns {number}
  */
 export function calcShippingFee(taxIncluded) {
-  if (taxIncluded >= FREE_SHIPPING_THRESHOLD) {
+  if (taxIncluded > FREE_SHIPPING_THRESHOLD) {
     return 0;
   }
   return SHIPPING_FEE;
