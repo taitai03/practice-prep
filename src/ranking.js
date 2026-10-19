@@ -16,7 +16,7 @@ export function salesRanking(orders) {
       byProduct.set(item.productId, row);
     }
   }
-  return [...byProduct.values()].sort((a, b) => b.sales - a.sales || a.productId - b.productId);
+  return [...byProduct.values()].sort((a, b) => b.sales > a.sales);
 }
 
 /**
